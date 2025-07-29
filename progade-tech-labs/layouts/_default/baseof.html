@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="keywords" content="{{ .Site.Params.keywords }}{{ if .Params.tags }}, {{ delimit .Params.tags ", " }}{{ end }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ .Permalink }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Simple CSS (no PostCSS for now) -->
+  <style>
+    /* Basic styling to get started */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+   /* Header with floating logo */
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      min-height: 70px; /* Fixed navbar height */
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    .logo-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 1001;
+    /* Remove these lines: */
+    /* background-color: white; */
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-radius: 8px;
+    }
+    
+    /* Large logo that extends outside navbar */
+.logo-container img {
+  height: 70px;
+  width: auto;
+  background: transparent !important;
+  /* If SVG has fill, you can try: */
+  filter:  none;  /* Makes it black */
+  /* filter: none; */
+}
+    
+    /* Push navigation to the right to avoid logo overlap */
+    .desktop-nav {
+      display: none;
+      gap: 0.25rem;
+      margin-left: auto; /* Push to right */
+    }
+    
+    @media (min-width: 1024px) {
+      .desktop-nav {
+        display: flex;
+      }
+      
+      /* Ensure nav items don't overlap with logo */
+      .nav-container {
+        padding-left: 280px; /* Space for logo */
+      }
+    }
+    
+    .nav-link {
+      color: #1f2937;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      border-radius: 0.5rem;
+    }
+    
+    .nav-link:hover {
+      color: #2563eb;
+      background-color: #eff6ff;
+    }
+    
+    /* Mobile menu button positioned to right */
+    .mobile-menu-btn {
+      display: block;
+      padding: 0.5rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      margin-left: auto;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    
+    .mobile-menu-btn:hover {
+      background-color: #f3f4f6;
+    }
+    
+    /* Mobile nav */
+    .mobile-nav {
+      display: block;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-nav {
+        display: none;
+      }
+    }
+    
+    .mobile-nav.hidden {
+      display: none;
+    }
+    
+    .mobile-nav .nav-link {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .mobile-nav .nav-link:hover {
+      background-color: #f3f4f6;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 1023px) {
+      .logo-container {
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      
+      .logo-container img {
+        height: 60px; /* Smaller on mobile */
+      }
+      
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+      
+      .nav-container {
+        padding-left: 0;
+      }
+    }
+ 
+    /* Main content */
+    main {
+      min-height: calc(100vh - 200px);
+    }
+    
+    /* Footer */
+    .site-footer {
+      background-color: #1f2937;
+      color: white;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-content p {
+      margin: 0;
+      color: #9ca3af;
+    }
+    
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1;
+    }
+    
+    .btn-primary {
+      background-color: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+    
+    .btn-primary:hover {
+      background-color: #1e40af;
+      border-color: #1e40af;
+      color: white;
+    }
+  </style>
+  
+  <!-- Analytics (only if GoogleAnalytics is set) -->
+  {{ if site.Config.Services.GoogleAnalytics.ID }}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Config.Services.GoogleAnalytics.ID }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.Config.Services.GoogleAnalytics.ID }}');
+  </script>
+  {{ end }}
+</head>
+
+<body>
+  <!-- Skip to Content Link for Accessibility -->
+  <a href="#main-content" style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;" 
+     onfocus="this.style.position='fixed'; this.style.top='10px'; this.style.left='10px'; this.style.width='auto'; this.style.height='auto'; this.style.overflow='visible'; this.style.zIndex='9999'; this.style.background='#2563eb'; this.style.color='white'; this.style.padding='8px 16px'; this.style.borderRadius='4px'; this.style.textDecoration='none';"
+     onblur="this.style.position='absolute'; this.style.left='-9999px'; this.style.top='auto'; this.style.width='1px'; this.style.height='1px'; this.style.overflow='hidden';">
+    Skip to main content
+  </a>
+  
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <nav class="nav-container">
+        <!-- Logo -->
+        <div class="logo-container">
+          <a href="/" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+            {{ if .Site.Params.logo }}
+              <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Params.company_name }}">
+            {{ else }}
+              <!-- Logo Placeholder -->
+              <div class="logo-placeholder">P</div>
+            {{ end }}
+          </a>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+          {{ if .Site.Menus.main }}
+            {{ range .Site.Menus.main }}
+              <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+            {{ end }}
+          {{ else }}
+            <!-- Default menu if no menu is configured -->
+            <a href="/" class="nav-link">Home</a>
+            <a href="/services/" class="nav-link">Services</a>
+            <a href="/about/" class="nav-link">About</a>
+            <a href="/contact/" class="nav-link">Contact</a>
+          {{ end }}
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="mobile-nav hidden">
+        <div style="display: flex; flex-direction: column;">
+          {{ if .Site.Menus.main }}
+            {{ range .Site.Menus.main }}
+              <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+            {{ end }}
+          {{ else }}
+            <!-- Default mobile menu -->
+            <a href="/" class="nav-link">Home</a>
+            <a href="/services/" class="nav-link">Services</a>
+            <a href="/about/" class="nav-link">About</a>
+            <a href="/contact/" class="nav-link">Contact</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    {{ block "main" . }}
+      <div class="container" style="padding: 4rem 1rem; text-align: center;">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </div>
+    {{ end }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; {{ now.Year }} {{ .Site.Params.company_name | default .Site.Title }}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      
+      if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

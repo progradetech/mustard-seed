@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta name="generator" content="Hugo 0.148.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  <title>Prograde Tech Labs - IT Consulting &amp; Custom Software</title>
+  <meta name="description" content="Leading IT consulting and custom software development company specializing in digital transformation, cloud solutions, and cybersecurity.">
+  <meta name="keywords" content="IT consulting, custom software development, cloud solutions, cybersecurity, digital transformation">
+  <meta name="author" content="Prograde Tech Labs">
+  
+  
+  <link rel="canonical" href="http://localhost:1313/">
+  
+  
+  <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/favicon.ico">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  
+  <style>
+     
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      min-height: 70px;  
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    .logo-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 1001;
+     
+     
+     
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-radius: 8px;
+    }
+    
+     
+.logo-container img {
+  height: 70px;
+  width: auto;
+  background: transparent !important;
+   
+  filter:  none;   
+   
+}
+    
+     
+    .desktop-nav {
+      display: none;
+      gap: 0.25rem;
+      margin-left: auto;  
+    }
+    
+    @media (min-width: 1024px) {
+      .desktop-nav {
+        display: flex;
+      }
+      
+       
+      .nav-container {
+        padding-left: 280px;  
+      }
+    }
+    
+    .nav-link {
+      color: #1f2937;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      border-radius: 0.5rem;
+    }
+    
+    .nav-link:hover {
+      color: #2563eb;
+      background-color: #eff6ff;
+    }
+    
+     
+    .mobile-menu-btn {
+      display: block;
+      padding: 0.5rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      margin-left: auto;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    
+    .mobile-menu-btn:hover {
+      background-color: #f3f4f6;
+    }
+    
+     
+    .mobile-nav {
+      display: block;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-nav {
+        display: none;
+      }
+    }
+    
+    .mobile-nav.hidden {
+      display: none;
+    }
+    
+    .mobile-nav .nav-link {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .mobile-nav .nav-link:hover {
+      background-color: #f3f4f6;
+    }
+    
+     
+    @media (max-width: 1023px) {
+      .logo-container {
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      
+      .logo-container img {
+        height: 60px;  
+      }
+      
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+      
+      .nav-container {
+        padding-left: 0;
+      }
+    }
+ 
+     
+    main {
+      min-height: calc(100vh - 200px);
+    }
+    
+     
+    .site-footer {
+      background-color: #1f2937;
+      color: white;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-content p {
+      margin: 0;
+      color: #9ca3af;
+    }
+    
+     
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1;
+    }
+    
+    .btn-primary {
+      background-color: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+    
+    .btn-primary:hover {
+      background-color: #1e40af;
+      border-color: #1e40af;
+      color: white;
+    }
+  </style>
+  
+  
+  
+</head>
+
+<body>
+  
+  <a href="#main-content" style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;" 
+     onfocus="this.style.position='fixed'; this.style.top='10px'; this.style.left='10px'; this.style.width='auto'; this.style.height='auto'; this.style.overflow='visible'; this.style.zIndex='9999'; this.style.background='#2563eb'; this.style.color='white'; this.style.padding='8px 16px'; this.style.borderRadius='4px'; this.style.textDecoration='none';"
+     onblur="this.style.position='absolute'; this.style.left='-9999px'; this.style.top='auto'; this.style.width='1px'; this.style.height='1px'; this.style.overflow='hidden';">
+    Skip to main content
+  </a>
+  
+  
+  <header class="navbar">
+    <div class="container">
+      <nav class="nav-container">
+        
+        <div class="logo-container">
+          <a href="http://localhost:1313/" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+            
+              <img src="http://localhost:1313/images/ProgradeTechLabs.svg" alt="Prograde Tech Labs">
+            
+          </a>
+        </div>
+        
+        
+        <div class="desktop-nav">
+          
+            
+              <a href="http://localhost:1313/" class="nav-link">Home</a>
+            
+              <a href="http://localhost:1313/services/" class="nav-link">Services</a>
+            
+              <a href="http://localhost:1313/about/" class="nav-link">About</a>
+            
+              <a href="http://localhost:1313/team/" class="nav-link">Team</a>
+            
+              <a href="http://localhost:1313/case-studies/" class="nav-link">Case Studies</a>
+            
+              <a href="http://localhost:1313/blog/" class="nav-link">Blog</a>
+            
+              <a href="http://localhost:1313/contact/" class="nav-link">Contact</a>
+            
+              <a href="http://localhost:1313/schedule/" class="nav-link">Schedule Meeting</a>
+            
+          
+        </div>
+        
+        
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+      
+      
+      <div id="mobile-menu" class="mobile-nav hidden">
+        <div style="display: flex; flex-direction: column;">
+          
+            
+              <a href="http://localhost:1313/" class="nav-link">Home</a>
+            
+              <a href="http://localhost:1313/services/" class="nav-link">Services</a>
+            
+              <a href="http://localhost:1313/about/" class="nav-link">About</a>
+            
+              <a href="http://localhost:1313/team/" class="nav-link">Team</a>
+            
+              <a href="http://localhost:1313/case-studies/" class="nav-link">Case Studies</a>
+            
+              <a href="http://localhost:1313/blog/" class="nav-link">Blog</a>
+            
+              <a href="http://localhost:1313/contact/" class="nav-link">Contact</a>
+            
+              <a href="http://localhost:1313/schedule/" class="nav-link">Schedule Meeting</a>
+            
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <main id="main-content" role="main">
+    
+
+
+<section style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: white; padding: 5rem 0; position: relative; overflow: hidden;">
+
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; position: relative; z-index: 1;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: 500px;">
+      
+      
+      <div>
+        <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem;">
+          Transform Your Business with <span style="color: #06b6d4;">Innovative IT Solutions</span>
+        </h1>
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2rem; opacity: 0.9;">
+          Prograde Tech Labs delivers cutting-edge custom software development, IT consulting, and digital transformation services to accelerate your business growth.
+        </p>
+        
+        
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="http://localhost:1313/schedule/" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #06b6d4; color: white; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.2s ease; box-shadow: 0 4px 14px 0 rgba(6, 182, 212, 0.39);">
+            <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            Schedule Free Consultation
+          </a>
+          <a href="http://localhost:1313/services/" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: transparent; color: white; padding: 1rem 2rem; border: 2px solid white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.2s ease;">
+            <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            Explore Services
+          </a>
+        </div>
+      </div>
+      
+      
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="position: relative; width: 100%; max-width: 500px;">
+          
+          <svg viewBox="0 0 400 300" style="width: 100%; height: auto;">
+            
+            <circle cx="200" cy="150" r="120" fill="#ffffff" opacity="0.1"/>
+            
+            
+            <rect x="120" y="120" width="160" height="100" rx="8" fill="#374151" stroke="#06b6d4" stroke-width="2"/>
+            <rect x="130" y="130" width="140" height="80" rx="4" fill="#111827"/>
+            
+            
+            <line x1="140" y1="145" x2="180" y2="145" stroke="#06b6d4" stroke-width="2"/>
+            <line x1="140" y1="155" x2="200" y2="155" stroke="#10b981" stroke-width="2"/>
+            <line x1="140" y1="165" x2="160" y2="165" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="140" y1="175" x2="220" y2="175" stroke="#06b6d4" stroke-width="2"/>
+            <line x1="140" y1="185" x2="190" y2="185" stroke="#10b981" stroke-width="2"/>
+            
+            
+            
+            <g transform="translate(80,80)">
+              <circle cx="20" cy="15" r="12" fill="#06b6d4" opacity="0.8"/>
+              <path d="M8 15c0-4.4 3.6-8 8-8s8 3.6 8 8c2.2 0 4 1.8 4 4s-1.8 4-4 4H12c-2.2 0-4-1.8-4-4s1.8-4 4-4z" fill="white"/>
+            </g>
+            
+            
+            <g transform="translate(300,60)">
+              <circle cx="20" cy="20" r="15" fill="#10b981" opacity="0.8"/>
+              <path d="M20 12c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 12c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white"/>
+            </g>
+            
+            
+            <g transform="translate(320,180)">
+              <circle cx="15" cy="15" r="12" fill="#f59e0b" opacity="0.8"/>
+              <path d="M15 3l6 3v6c0 3.3-2.3 6.4-6 7-3.7-0.6-6-3.7-6-7V6l6-3z" fill="white"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="padding: 4rem 0; background-color: #f8fafc;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+    <div style="text-center; margin-bottom: 3rem;">
+      <h2 style="font-size: 2.5rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Our Core Competencies</h2>
+      <p style="font-size: 1.125rem; color: #6b7280; max-width: 600px; margin: 0 auto;">
+        We specialize in delivering comprehensive IT solutions that drive innovation and business growth
+      </p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      
+      
+      <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; border: 1px solid #e5e7eb;">
+        <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #2563eb, #1e40af); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+          <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">Custom Software Development</h3>
+        <p style="color: #6b7280; line-height: 1.6; margin-bottom: 1.5rem;">
+          Tailored software solutions designed to meet your unique business requirements and scale with your growth.
+        </p>
+        <a href="http://localhost:1313/services/custom-software-development/" style="color: #2563eb; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+          Learn More
+          <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      
+      <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; border: 1px solid #e5e7eb;">
+        <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #10b981, #059669); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+          <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">IT Strategy & Consulting</h3>
+        <p style="color: #6b7280; line-height: 1.6; margin-bottom: 1.5rem;">
+          Strategic IT guidance to optimize your technology infrastructure and drive digital transformation initiatives.
+        </p>
+        <a href="http://localhost:1313/services/it-consulting/" style="color: #10b981; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+          Learn More
+          <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      
+      <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; border: 1px solid #e5e7eb;">
+        <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+          <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">Cloud Solutions</h3>
+        <p style="color: #6b7280; line-height: 1.6; margin-bottom: 1.5rem;">
+          Seamless cloud migration, architecture design, and optimization for improved scalability and cost efficiency.
+        </p>
+        <a href="http://localhost:1313/services/cloud-solutions/" style="color: #06b6d4; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+          Learn More
+          <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      
+      <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; border: 1px solid #e5e7eb;">
+        <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+          <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">Cybersecurity</h3>
+        <p style="color: #6b7280; line-height: 1.6; margin-bottom: 1.5rem;">
+          Comprehensive security assessments, implementation, and monitoring to protect your digital assets.
+        </p>
+        <a href="http://localhost:1313/services/cybersecurity/" style="color: #f59e0b; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+          Learn More
+          <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="padding: 4rem 0;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+    <div style="text-center; margin-bottom: 3rem;">
+      <h2 style="font-size: 2.5rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">Recent Success Stories</h2>
+      <p style="font-size: 1.125rem; color: #6b7280; max-width: 600px; margin: 0 auto;">
+        Discover how we've helped businesses transform their operations through innovative technology solutions
+      </p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+      
+      
+      <div style="background: white; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease;">
+        <div style="height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+          
+          <svg viewBox="0 0 200 120" style="width: 60%; height: auto; opacity: 0.9;">
+            <rect x="40" y="40" width="120" height="40" rx="8" fill="white" opacity="0.9"/>
+            <circle cx="60" cy="60" r="8" fill="#667eea"/>
+            <rect x="75" y="55" width="30" height="3" fill="#667eea"/>
+            <rect x="75" y="62" width="45" height="3" fill="#667eea"/>
+            <rect x="125" y="55" width="20" height="10" fill="#10b981"/>
+            
+            <polyline points="20,90 40,75 60,85 80,65 100,70 120,55 140,60 160,45 180,50" stroke="white" stroke-width="3" fill="none"/>
+          </svg>
+          <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.2); padding: 0.5rem; border-radius: 0.5rem; color: white; font-size: 0.875rem; font-weight: 600;">FinTech</div>
+        </div>
+        <div style="padding: 2rem;">
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">FinTech Platform Modernization</h3>
+          <p style="color: #6b7280; margin-bottom: 1.5rem; line-height: 1.6;">
+            Complete digital transformation of a legacy financial platform, improving performance by 300% and user satisfaction by 85%.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span style="background: #2563eb; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">React</span>
+            <span style="background: #2563eb; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">Node.js</span>
+            <span style="background: #2563eb; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">AWS</span>
+          </div>
+          <a href="http://localhost:1313/case-studies/fintech-modernization/" style="color: #2563eb; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+            Read Case Study
+            <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      
+      <div style="background: white; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease;">
+        <div style="height: 200px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+          
+          <svg viewBox="0 0 200 120" style="width: 60%; height: auto; opacity: 0.9;">
+            <rect x="60" y="30" width="80" height="60" rx="8" fill="white" opacity="0.9"/>
+            <circle cx="100" cy="50" r="8" fill="#10b981"/>
+            <rect x="92" y="46" width="16" height="3" fill="white"/>
+            <rect x="98" y="40" width="4" height="15" fill="white"/>
+            
+            <rect x="40" y="55" width="15" height="3" fill="#ef4444"/>
+            <rect x="46" y="49" width="3" height="15" fill="#ef4444"/>
+            
+            <rect x="120" y="65" width="4" height="15" fill="#06b6d4"/>
+            <rect x="130" y="70" width="4" height="10" fill="#06b6d4"/>
+            <rect x="140" y="60" width="4" height="20" fill="#06b6d4"/>
+          </svg>
+          <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.2); padding: 0.5rem; border-radius: 0.5rem; color: #1f2937; font-size: 0.875rem; font-weight: 600;">Healthcare</div>
+        </div>
+        <div style="padding: 2rem;">
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">Healthcare Management System</h3>
+          <p style="color: #6b7280; margin-bottom: 1.5rem; line-height: 1.6;">
+            Custom EHR system serving 50,000+ patients with HIPAA compliance and real-time analytics dashboard.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span style="background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">Python</span>
+            <span style="background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">Django</span>
+            <span style="background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">PostgreSQL</span>
+          </div>
+          <a href="http://localhost:1313/case-studies/healthcare-system/" style="color: #10b981; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+            Read Case Study
+            <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      
+      <div style="background: white; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); overflow: hidden; transition: all 0.3s ease;">
+        <div style="height: 200px; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+          
+          <svg viewBox="0 0 200 120" style="width: 60%; height: auto; opacity: 0.9;">
+            <rect x="70" y="40" width="60" height="40" rx="4" fill="white" opacity="0.9"/>
+            
+            <rect x="40" y="50" width="20" height="15" rx="2" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+            <circle cx="45" cy="72" r="3" fill="#d97706"/>
+            <circle cx="55" cy="72" r="3" fill="#d97706"/>
+            
+            <rect x="80" y="50" width="8" height="8" fill="#06b6d4"/>
+            <rect x="90" y="50" width="8" height="8" fill="#10b981"/>
+            <rect x="100" y="50" width="8" height="8" fill="#f59e0b"/>
+            
+            <rect x="140" y="60" width="3" height="10" fill="#8b5cf6"/>
+            <rect x="145" y="55" width="3" height="15" fill="#8b5cf6"/>
+            <rect x="150" y="50" width="3" height="20" fill="#8b5cf6"/>
+          </svg>
+          <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.2); padding: 0.5rem; border-radius: 0.5rem; color: #1f2937; font-size: 0.875rem; font-weight: 600;">E-commerce</div>
+        </div>
+        <div style="padding: 2rem;">
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">E-commerce Platform</h3>
+          <p style="color: #6b7280; margin-bottom: 1.5rem; line-height: 1.6;">
+            Scalable e-commerce solution handling 1M+ transactions monthly with advanced analytics and AI recommendations.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span style="background: #f59e0b; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">Vue.js</span>
+            <span style="background: #f59e0b; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">Laravel</span>
+            <span style="background: #f59e0b; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;">Docker</span>
+          </div>
+          <a href="http://localhost:1313/case-studies/ecommerce-platform/" style="color: #f59e0b; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+            Read Case Study
+            <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="padding: 4rem 0; background-color: #f8fafc;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+    <div style="text-center; margin-bottom: 3rem;">
+      <h2 style="font-size: 2.5rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem;">What Our Clients Say</h2>
+      <p style="font-size: 1.125rem; color: #6b7280;">
+        Trusted by leading companies across various industries
+      </p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+      
+      
+      <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); position: relative;">
+        <div style="color: #fbbf24; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+        <blockquote style="color: #374151; margin-bottom: 1.5rem; font-style: italic; line-height: 1.6; font-size: 1.125rem;">
+          "Prograde Tech Labs transformed our entire IT infrastructure. Their expertise in cloud migration saved us 40% in operational costs while improving system reliability."
+        </blockquote>
+        <div>
+          <p style="font-weight: 700; color: #1f2937; margin-bottom: 0.25rem;">Sarah Johnson</p>
+          <p style="font-size: 0.875rem; color: #6b7280;">CTO, TechCorp Solutions</p>
+        </div>
+      </div>
+
+      
+      <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); position: relative;">
+        <div style="color: #fbbf24; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+        <blockquote style="color: #374151; margin-bottom: 1.5rem; font-style: italic; line-height: 1.6; font-size: 1.125rem;">
+          "The custom software they developed exceeded our expectations. The project was delivered on time and their ongoing support has been exceptional."
+        </blockquote>
+        <div>
+          <p style="font-weight: 700; color: #1f2937; margin-bottom: 0.25rem;">Michael Chen</p>
+          <p style="font-size: 0.875rem; color: #6b7280;">CEO, InnovateLab</p>
+        </div>
+      </div>
+
+      
+      <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); position: relative;">
+        <div style="color: #fbbf24; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+        <blockquote style="color: #374151; margin-bottom: 1.5rem; font-style: italic; line-height: 1.6; font-size: 1.125rem;">
+          "Their cybersecurity assessment and implementation gave us peace of mind. We now have enterprise-grade security without the enterprise complexity."
+        </blockquote>
+        <div>
+          <p style="font-weight: 700; color: #1f2937; margin-bottom: 0.25rem;">Emily Rodriguez</p>
+          <p style="font-size: 0.875rem; color: #6b7280;">IT Director, SecureBank</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="padding: 3rem 0;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+    <div style="text-center; margin-bottom: 2rem;">
+      <h3 style="font-size: 1.5rem; font-weight: 600; color: #6b7280; margin-bottom: 0.5rem;">Trusted by Industry Leaders</h3>
+    </div>
+    
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 3rem; opacity: 0.6;">
+      
+      <div style="width: 120px; height: 60px; background: linear-gradient(135deg, #e5e7eb, #d1d5db); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <span style="color: #6b7280; font-weight: 600; font-size: 0.875rem;">TechCorp</span>
+      </div>
+      
+      
+      <div style="width: 120px; height: 60px; background: linear-gradient(135deg, #e5e7eb, #d1d5db); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <span style="color: #6b7280; font-weight: 600; font-size: 0.875rem;">InnovateLab</span>
+      </div>
+      
+      
+      <div style="width: 120px; height: 60px; background: linear-gradient(135deg, #e5e7eb, #d1d5db); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <span style="color: #6b7280; font-weight: 600; font-size: 0.875rem;">SecureBank</span>
+      </div>
+      
+      
+      <div style="width: 120px; height: 60px; background: linear-gradient(135deg, #e5e7eb, #d1d5db); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <span style="color: #6b7280; font-weight: 600; font-size: 0.875rem;">HealthSys</span>
+      </div>
+      
+      
+      <div style="width: 120px; height: 60px; background: linear-gradient(135deg, #e5e7eb, #d1d5db); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <span style="color: #6b7280; font-weight: 600; font-size: 0.875rem;">RetailPlus</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%); color: white; padding: 4rem 0;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; text-align: center;">
+    <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Ready to Transform Your Business?</h2>
+    <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+      Let's discuss how our innovative IT solutions can accelerate your growth and give you a competitive edge in today's digital landscape.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="http://localhost:1313/schedule/" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #06b6d4; color: white; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.2s ease; box-shadow: 0 4px 14px 0 rgba(6, 182, 212, 0.39);">
+        <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        Schedule Free Consultation
+      </a>
+      <a href="http://localhost:1313/contact/" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: transparent; color: white; padding: 1rem 2rem; border: 2px solid white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.125rem; transition: all 0.2s ease;">
+        <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<style>
+ 
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0 !important;
+  }
+  
+  .hero-section > div > div {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-section .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-section .cta-buttons a {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  section h2 {
+    font-size: 2rem !important;
+  }
+}
+
+ 
+.service-card:hover,
+.project-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.hero-section .cta-buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(6, 182, 212, 0.5) !important;
+}
+
+.hero-section .cta-buttons a:nth-child(2):hover {
+  background-color: white;
+  color: #2563eb;
+}
+
+.client-logos > div > div:hover {
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+
+ 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card,
+.project-card,
+.testimonial-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+ 
+.hero-title span {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+</style>
+
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Prograde Tech Labs. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script>
+    
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    }
+    
+    
+    document.addEventListener('click', function(event) {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      
+      if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

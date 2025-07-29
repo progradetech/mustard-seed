@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  <title>Our Services | Prograde Tech Labs - IT Consulting &amp; Custom Software</title>
+  <meta name="description" content="Comprehensive IT consulting and custom software development services">
+  <meta name="keywords" content="IT consulting, custom software development, cloud solutions, cybersecurity, digital transformation">
+  <meta name="author" content="Prograde Tech Labs">
+  
+  
+  <link rel="canonical" href="http://localhost:1313/services/">
+  
+  
+  <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/favicon.ico">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  
+  <style>
+     
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      min-height: 70px;  
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    .logo-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 1001;
+     
+     
+     
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-radius: 8px;
+    }
+    
+     
+.logo-container img {
+  height: 70px;
+  width: auto;
+  background: transparent !important;
+   
+  filter:  none;   
+   
+}
+    
+     
+    .desktop-nav {
+      display: none;
+      gap: 0.25rem;
+      margin-left: auto;  
+    }
+    
+    @media (min-width: 1024px) {
+      .desktop-nav {
+        display: flex;
+      }
+      
+       
+      .nav-container {
+        padding-left: 280px;  
+      }
+    }
+    
+    .nav-link {
+      color: #1f2937;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      border-radius: 0.5rem;
+    }
+    
+    .nav-link:hover {
+      color: #2563eb;
+      background-color: #eff6ff;
+    }
+    
+     
+    .mobile-menu-btn {
+      display: block;
+      padding: 0.5rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      margin-left: auto;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+    
+    .mobile-menu-btn:hover {
+      background-color: #f3f4f6;
+    }
+    
+     
+    .mobile-nav {
+      display: block;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    @media (min-width: 1024px) {
+      .mobile-nav {
+        display: none;
+      }
+    }
+    
+    .mobile-nav.hidden {
+      display: none;
+    }
+    
+    .mobile-nav .nav-link {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .mobile-nav .nav-link:hover {
+      background-color: #f3f4f6;
+    }
+    
+     
+    @media (max-width: 1023px) {
+      .logo-container {
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      
+      .logo-container img {
+        height: 60px;  
+      }
+      
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+      
+      .nav-container {
+        padding-left: 0;
+      }
+    }
+ 
+     
+    main {
+      min-height: calc(100vh - 200px);
+    }
+    
+     
+    .site-footer {
+      background-color: #1f2937;
+      color: white;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+    }
+    
+    .footer-content {
+      text-align: center;
+    }
+    
+    .footer-content p {
+      margin: 0;
+      color: #9ca3af;
+    }
+    
+     
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1;
+    }
+    
+    .btn-primary {
+      background-color: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+    
+    .btn-primary:hover {
+      background-color: #1e40af;
+      border-color: #1e40af;
+      color: white;
+    }
+  </style>
+  
+  
+  
+</head>
+
+<body>
+  
+  <a href="#main-content" style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;" 
+     onfocus="this.style.position='fixed'; this.style.top='10px'; this.style.left='10px'; this.style.width='auto'; this.style.height='auto'; this.style.overflow='visible'; this.style.zIndex='9999'; this.style.background='#2563eb'; this.style.color='white'; this.style.padding='8px 16px'; this.style.borderRadius='4px'; this.style.textDecoration='none';"
+     onblur="this.style.position='absolute'; this.style.left='-9999px'; this.style.top='auto'; this.style.width='1px'; this.style.height='1px'; this.style.overflow='hidden';">
+    Skip to main content
+  </a>
+  
+  
+  <header class="navbar">
+    <div class="container">
+      <nav class="nav-container">
+        
+        <div class="logo-container">
+          <a href="http://localhost:1313/" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+            
+              <img src="http://localhost:1313/images/ProgradeTechLabs.svg" alt="Prograde Tech Labs">
+            
+          </a>
+        </div>
+        
+        
+        <div class="desktop-nav">
+          
+            
+              <a href="http://localhost:1313/" class="nav-link">Home</a>
+            
+              <a href="http://localhost:1313/services/" class="nav-link">Services</a>
+            
+              <a href="http://localhost:1313/about/" class="nav-link">About</a>
+            
+              <a href="http://localhost:1313/team/" class="nav-link">Team</a>
+            
+              <a href="http://localhost:1313/case-studies/" class="nav-link">Case Studies</a>
+            
+              <a href="http://localhost:1313/blog/" class="nav-link">Blog</a>
+            
+              <a href="http://localhost:1313/contact/" class="nav-link">Contact</a>
+            
+              <a href="http://localhost:1313/schedule/" class="nav-link">Schedule Meeting</a>
+            
+          
+        </div>
+        
+        
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+      
+      
+      <div id="mobile-menu" class="mobile-nav hidden">
+        <div style="display: flex; flex-direction: column;">
+          
+            
+              <a href="http://localhost:1313/" class="nav-link">Home</a>
+            
+              <a href="http://localhost:1313/services/" class="nav-link">Services</a>
+            
+              <a href="http://localhost:1313/about/" class="nav-link">About</a>
+            
+              <a href="http://localhost:1313/team/" class="nav-link">Team</a>
+            
+              <a href="http://localhost:1313/case-studies/" class="nav-link">Case Studies</a>
+            
+              <a href="http://localhost:1313/blog/" class="nav-link">Blog</a>
+            
+              <a href="http://localhost:1313/contact/" class="nav-link">Contact</a>
+            
+              <a href="http://localhost:1313/schedule/" class="nav-link">Schedule Meeting</a>
+            
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <main id="main-content" role="main">
+    
+<div class="container" style="padding: 2rem 1rem;">
+  
+  <div style="text-align: center; margin-bottom: 3rem;">
+    <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: #1f2937;">Our Services</h1>
+    <p style="font-size: 1.25rem; color: #6b7280; max-width: 600px; margin: 0 auto;">
+      <h1 id="our-services">Our Services</h1>
+<p>Prograde Tech Labs specializes in delivering comprehensive IT solutions that drive innovation and business growth.</p>
+
+    </p>
+  </div>
+
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+    
+    
+    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 2rem; border: 1px solid #e5e7eb; transition: all 0.2s ease-in-out;" 
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.1)'">
+      
+      
+      <div style="margin-bottom: 1.5rem;">
+        
+          <svg style="width: 3rem; height: 3rem; color: #2563eb;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+        
+      </div>
+      
+      
+      <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1f2937;">
+        <a href="http://localhost:1313/services/custom-software-development/" style="text-decoration: none; color: inherit;">Custom Software Development</a>
+      </h3>
+      
+      
+      <p style="color: #6b7280; margin-bottom: 1.5rem; line-height: 1.6;">
+        Tailored software solutions designed to meet your unique business requirements
+      </p>
+      
+      
+      <a href="http://localhost:1313/services/custom-software-development/" style="color: #2563eb; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+        Learn More
+        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    
+    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 2rem; border: 1px solid #e5e7eb; transition: all 0.2s ease-in-out;" 
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.1)'">
+      
+      
+      <div style="margin-bottom: 1.5rem;">
+        
+          <svg style="width: 3rem; height: 3rem; color: #2563eb;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        
+      </div>
+      
+      
+      <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1f2937;">
+        <a href="http://localhost:1313/services/it-consulting/" style="text-decoration: none; color: inherit;">IT Strategy &amp; Consulting</a>
+      </h3>
+      
+      
+      <p style="color: #6b7280; margin-bottom: 1.5rem; line-height: 1.6;">
+        Strategic IT guidance to optimize your technology infrastructure
+      </p>
+      
+      
+      <a href="http://localhost:1313/services/it-consulting/" style="color: #2563eb; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+        Learn More
+        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    
+    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 2rem; border: 1px solid #e5e7eb; transition: all 0.2s ease-in-out;" 
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.1)'">
+      
+      
+      <div style="margin-bottom: 1.5rem;">
+        
+          <svg style="width: 3rem; height: 3rem; color: #2563eb;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+          </svg>
+        
+      </div>
+      
+      
+      <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1f2937;">
+        <a href="http://localhost:1313/services/cloud-solutions/" style="text-decoration: none; color: inherit;">Cloud Solutions</a>
+      </h3>
+      
+      
+      <p style="color: #6b7280; margin-bottom: 1.5rem; line-height: 1.6;">
+        Seamless cloud migration and optimization services
+      </p>
+      
+      
+      <a href="http://localhost:1313/services/cloud-solutions/" style="color: #2563eb; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+        Learn More
+        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    
+    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 2rem; border: 1px solid #e5e7eb; transition: all 0.2s ease-in-out;" 
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.1)'">
+      
+      
+      <div style="margin-bottom: 1.5rem;">
+        
+          <svg style="width: 3rem; height: 3rem; color: #2563eb;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+        
+      </div>
+      
+      
+      <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1f2937;">
+        <a href="http://localhost:1313/services/cybersecurity/" style="text-decoration: none; color: inherit;">Cybersecurity</a>
+      </h3>
+      
+      
+      <p style="color: #6b7280; margin-bottom: 1.5rem; line-height: 1.6;">
+        Comprehensive security assessments and implementation
+      </p>
+      
+      
+      <a href="http://localhost:1313/services/cybersecurity/" style="color: #2563eb; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+        Learn More
+        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    
+  </div>
+
+  
+  <div style="text-align: center; padding: 3rem 1rem; background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); border-radius: 0.5rem; color: white;">
+    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: white;">Ready to Get Started?</h2>
+    <p style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+      Let's discuss how our services can help transform your business and accelerate your growth.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="http://localhost:1313/schedule/" class="btn btn-accent" style="background-color: #06b6d4; color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+        Schedule Consultation
+        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+      </a>
+      <a href="http://localhost:1313/contact/" style="background-color: transparent; color: white; padding: 0.75rem 2rem; border: 2px solid white; border-radius: 0.5rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+        Get in Touch
+        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Prograde Tech Labs. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script>
+    
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    }
+    
+    
+    document.addEventListener('click', function(event) {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      
+      if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
