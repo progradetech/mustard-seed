@@ -2,4 +2,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
 <meta name="description" content="{{ site.Params.description }}">
+<base href="{{ site.BaseURL }}">
 {{ partial "head/css.html" . }}
