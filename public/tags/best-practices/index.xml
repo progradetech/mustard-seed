@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Best Practices on Prograde Tech Labs</title><link>https://progradetech.github.io/mustard-seed/tags/best-practices/</link><description>Recent content in Best Practices on Prograde Tech Labs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 15 Feb 2025 14:00:00 +0000</lastBuildDate><atom:link href="https://progradetech.github.io/mustard-seed/tags/best-practices/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Integration Best Practices for Modern Businesses</title><link>https://progradetech.github.io/mustard-seed/blog/ai-integration-best-practices/</link><pubDate>Sat, 15 Feb 2025 14:00:00 +0000</pubDate><guid>https://progradetech.github.io/mustard-seed/blog/ai-integration-best-practices/</guid><description>&lt;p>Artificial Intelligence is transforming how businesses operate, but successful AI integration requires careful planning and execution. Here are key best practices we recommend based on our experience helping clients implement AI solutions:&lt;/p>
-&lt;h2 id="1-start-with-clear-business-objectives">1. Start with Clear Business Objectives&lt;/h2>
-&lt;p>Before diving into AI technologies, define specific business problems you want to solve. AI should serve your business goals, not the other way around.&lt;/p>
-&lt;h2 id="2-ensure-data-quality-and-availability">2. Ensure Data Quality and Availability&lt;/h2>
-&lt;p>AI systems are only as good as the data they&amp;rsquo;re trained on. Invest in data cleaning, organization, and governance before implementing AI solutions.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Best Practices on Prograde Tech Labs</title>
+    <link>http://localhost:1313/mustard-seed/tags/best-practices/</link>
+    <description>Recent content in Best Practices on Prograde Tech Labs</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Feb 2025 14:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/mustard-seed/tags/best-practices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Integration Best Practices for Modern Businesses</title>
+      <link>http://localhost:1313/mustard-seed/blog/ai-integration-best-practices/</link>
+      <pubDate>Sat, 15 Feb 2025 14:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mustard-seed/blog/ai-integration-best-practices/</guid>
+      <description>&lt;p&gt;Artificial Intelligence is transforming how businesses operate, but successful AI integration requires careful planning and execution. Here are key best practices we recommend based on our experience helping clients implement AI solutions:&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-start-with-clear-business-objectives&#34;&gt;1. Start with Clear Business Objectives&lt;/h2&gt;&#xA;&lt;p&gt;Before diving into AI technologies, define specific business problems you want to solve. AI should serve your business goals, not the other way around.&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-ensure-data-quality-and-availability&#34;&gt;2. Ensure Data Quality and Availability&lt;/h2&gt;&#xA;&lt;p&gt;AI systems are only as good as the data they&amp;rsquo;re trained on. Invest in data cleaning, organization, and governance before implementing AI solutions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
