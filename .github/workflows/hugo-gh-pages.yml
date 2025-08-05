@@ -44,6 +44,10 @@ jobs:
         run: |
           hugo --minify
 
+      - name: Add CNAME for custom domain
+        run: |
+          echo "www.progradetechlabs.com" > ./public/CNAME
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
