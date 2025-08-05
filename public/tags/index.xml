@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Prograde Tech Labs</title>
-    <link>http://localhost:1313/mustard-seed/tags/</link>
+    <link>http://localhost:1314/tags/</link>
     <description>Recent content in Tags on Prograde Tech Labs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Feb 2025 14:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/mustard-seed/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1314/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/mustard-seed/tags/ai/</link>
+      <link>http://localhost:1314/tags/ai/</link>
       <pubDate>Sat, 15 Feb 2025 14:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/ai/</guid>
+      <guid>http://localhost:1314/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Best Practices</title>
-      <link>http://localhost:1313/mustard-seed/tags/best-practices/</link>
+      <link>http://localhost:1314/tags/best-practices/</link>
       <pubDate>Sat, 15 Feb 2025 14:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/best-practices/</guid>
+      <guid>http://localhost:1314/tags/best-practices/</guid>
       <description></description>
     </item>
     <item>
       <title>Integration</title>
-      <link>http://localhost:1313/mustard-seed/tags/integration/</link>
+      <link>http://localhost:1314/tags/integration/</link>
       <pubDate>Sat, 15 Feb 2025 14:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/integration/</guid>
+      <guid>http://localhost:1314/tags/integration/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>http://localhost:1313/mustard-seed/tags/cloud/</link>
+      <link>http://localhost:1314/tags/cloud/</link>
       <pubDate>Sat, 01 Feb 2025 09:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/cloud/</guid>
+      <guid>http://localhost:1314/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Infrastructure</title>
-      <link>http://localhost:1313/mustard-seed/tags/infrastructure/</link>
+      <link>http://localhost:1314/tags/infrastructure/</link>
       <pubDate>Sat, 01 Feb 2025 09:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/infrastructure/</guid>
+      <guid>http://localhost:1314/tags/infrastructure/</guid>
       <description></description>
     </item>
     <item>
       <title>Trends</title>
-      <link>http://localhost:1313/mustard-seed/tags/trends/</link>
+      <link>http://localhost:1314/tags/trends/</link>
       <pubDate>Sat, 01 Feb 2025 09:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/trends/</guid>
+      <guid>http://localhost:1314/tags/trends/</guid>
       <description></description>
     </item>
     <item>
       <title>Company News</title>
-      <link>http://localhost:1313/mustard-seed/tags/company-news/</link>
+      <link>http://localhost:1314/tags/company-news/</link>
       <pubDate>Wed, 15 Jan 2025 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/company-news/</guid>
+      <guid>http://localhost:1314/tags/company-news/</guid>
       <description></description>
     </item>
     <item>
       <title>Introduction</title>
-      <link>http://localhost:1313/mustard-seed/tags/introduction/</link>
+      <link>http://localhost:1314/tags/introduction/</link>
       <pubDate>Wed, 15 Jan 2025 10:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/introduction/</guid>
+      <guid>http://localhost:1314/tags/introduction/</guid>
       <description></description>
     </item>
     <item>
       <title>Blue</title>
-      <link>http://localhost:1313/mustard-seed/tags/blue/</link>
+      <link>http://localhost:1314/tags/blue/</link>
       <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/blue/</guid>
+      <guid>http://localhost:1314/tags/blue/</guid>
       <description></description>
     </item>
     <item>
       <title>Green</title>
-      <link>http://localhost:1313/mustard-seed/tags/green/</link>
+      <link>http://localhost:1314/tags/green/</link>
       <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/green/</guid>
+      <guid>http://localhost:1314/tags/green/</guid>
       <description></description>
     </item>
     <item>
       <title>Red</title>
-      <link>http://localhost:1313/mustard-seed/tags/red/</link>
+      <link>http://localhost:1314/tags/red/</link>
       <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>http://localhost:1313/mustard-seed/tags/red/</guid>
+      <guid>http://localhost:1314/tags/red/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,5 +1,5 @@
-# Custom domain base URL with subpath
-baseURL = 'https://www.progradetechlabs.com/mustard-seed/'
+# Custom domain base URL at root
+baseURL = 'https://www.progradetechlabs.com/'
 languageCode = 'en-us'
 title = 'Prograde Tech Labs'
 theme = 'prograde-tech'
