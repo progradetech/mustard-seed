@@ -10,7 +10,7 @@
     <div class="post-hero__bg"></div>
     <div class="post-hero__content">
       <div class="post-hero__eyebrow">
-        <a href="{{ "/blog" | absURL }}" class="eyebrow-link">← Back to Blog</a>
+        <a href="../blog/" class="eyebrow-link">← Back to Blog</a>
         {{ with .Params.category }}
         <span class="category-chip">{{ . }}</span>
         {{ end }}
@@ -50,7 +50,7 @@
       {{ with .Params.tags }}
       <div class="post-hero__tags">
         {{ range . }}
-          <a class="tag-chip" href="{{ (print "/tags/" (. | urlize)) | absURL }}">{{ . }}</a>
+          <a class="tag-chip" href="../tags/{{ . | urlize }}/">{{ . }}</a>
         {{ end }}
       </div>
       {{ end }}
@@ -93,14 +93,14 @@
   <!-- Prev / Next -->
   <nav class="post-nav-cards">
     {{ with .PrevInSection -}}
-    <a href="{{ .RelPermalink | absURL }}" class="post-card prev">
+    <a href="{{ .RelPermalink | relURL }}" class="post-card prev">
       <span class="label">Previous</span>
       <span class="title">{{ .Title }}</span>
       <span class="arrow">←</span>
     </a>
     {{- end }}
     {{ with .NextInSection -}}
-    <a href="{{ .RelPermalink | absURL }}" class="post-card next">
+    <a href="{{ .RelPermalink | relURL }}" class="post-card next">
       <span class="label">Next</span>
       <span class="title">{{ .Title }}</span>
       <span class="arrow">→</span>

@@ -5,9 +5,9 @@ languageCode = 'en-us'
 title = 'Prograde Tech Labs'
 theme = 'prograde-tech'
 
-# Recommended for GitHub Project Pages so links work under /REPO_NAME/
-# Use relative URLs in content, and canonify to force absolute URLs with baseURL prefix.
-relativeURLs = true
+# For GitHub Project Pages - use absolute URLs with proper base
+# This ensures consistent URL generation without double paths
+relativeURLs = false
 canonifyURLs = true
 
 # Quiet Hugo warning about raw HTML in Markdown, or explicitly allow it.
