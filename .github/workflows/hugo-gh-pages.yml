@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - main
+      - release/**
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -49,10 +50,12 @@ jobs:
           path: ./public
 
   deploy:
+    name: Deploy to GitHub Pages (preview for release/**, production for main)
     needs: build
     runs-on: ubuntu-latest
+    # Pick preview env for release/* branches, production env for main
     environment:
-      name: github-pages
+      name: ${{ startsWith(github.ref, 'refs/heads/release/') && 'github-pages-preview' || 'github-pages' }}
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
