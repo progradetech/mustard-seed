@@ -1,6 +1,5 @@
-# Project Pages base URL. Replace USERNAME and REPO_NAME as needed.
-# Example: https://USERNAME.github.io/REPO_NAME/
-baseURL = 'https://progradetech.github.io/mustard-seed/'
+# Custom domain base URL with subpath
+baseURL = 'https://www.progradetechlabs.com/mustard-seed/'
 languageCode = 'en-us'
 title = 'Prograde Tech Labs'
 theme = 'prograde-tech'
