@@ -1,0 +1,182 @@
+{{ define "main" }}
+<!-- Blog Hero Section -->
+<section class="blog-hero">
+  <div class="blog-hero-content">
+    <h1>Our <span class="highlight-blog">Blog</span></h1>
+    <p>Insights, trends, and best practices in technology and business transformation</p>
+    <div class="blog-stats">
+      <div class="blog-stat-item">
+        <span class="stat-icon">📝</span>
+        <span class="stat-text">Latest Articles</span>
+      </div>
+      <div class="blog-stat-item">
+        <span class="stat-icon">💡</span>
+        <span class="stat-text">Tech Insights</span>
+      </div>
+      <div class="blog-stat-item">
+        <span class="stat-icon">🚀</span>
+        <span class="stat-text">Industry Trends</span>
+      </div>
+    </div>
+  </div>
+  <div class="blog-hero-visual">
+    <div class="floating-articles">
+      <div class="article-icon ai">🤖</div>
+      <div class="article-icon cloud">☁️</div>
+      <div class="article-icon web">🌐</div>
+      <div class="article-icon data">📊</div>
+      <div class="connecting-lines">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Articles -->
+<section class="featured-articles">
+  <div class="section-header">
+    <h2>Featured <span class="highlight-featured">Articles</span></h2>
+    <p>Our most popular and insightful content</p>
+  </div>
+  
+  <div class="featured-grid">
+    {{ with (first 1 (where site.RegularPages "Section" "blog").ByDate.Reverse) }}
+      {{ range . }}
+      <article class="featured-post">
+        <div class="featured-post-content">
+          <div class="post-category">
+            <span class="category-tag">Featured</span>
+          </div>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p class="post-meta">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <span class="read-time">{{ .ReadingTime }} min read</span>
+          </p>
+          <p class="post-excerpt">{{ .Summary }}</p>
+          <a href="{{ .RelPermalink }}" class="featured-read-more">Read Full Article</a>
+        </div>
+        <div class="featured-post-visual">
+          <div class="post-icon">📚</div>
+          <div class="post-glow"></div>
+        </div>
+      </article>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+<!-- Latest Articles Grid -->
+<section class="latest-articles">
+  <div class="section-header">
+    <h2>Latest <span class="highlight-latest">Articles</span></h2>
+    <p>Stay updated with our newest insights and discoveries</p>
+  </div>
+
+  <div class="articles-grid">
+    {{ $all := (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+    {{ if gt (len $all) 1 }}
+      {{ range (after 1 $all) }}
+      <article class="article-card" data-category="{{ .Params.category | default "general" }}">
+        <div class="article-header">
+          <div class="article-icon-small">
+            {{ $cat := .Params.category | default "general" }}
+            {{ if eq $cat "ai" }}🤖
+            {{ else if eq $cat "cloud" }}☁️
+            {{ else if eq $cat "web" }}🌐
+            {{ else }}💡{{ end }}
+          </div>
+          <div class="article-meta">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            <span class="reading-time">{{ .ReadingTime }} min read</span>
+          </div>
+        </div>
+        
+        <div class="article-content">
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="article-excerpt">{{ .Summary }}</p>
+        </div>
+        
+        <div class="article-footer">
+          <div class="article-footer-left">
+            <div class="article-tags">
+              {{ with .Params.tags }}
+                {{ range . }}
+                  <span class="tag">{{ . }}</span>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+          <div class="article-footer-right">
+            <a href="{{ .RelPermalink }}" class="read-more-btn">Read More</a>
+          </div>
+        </div>
+        
+        <div class="article-hover-effect"></div>
+      </article>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+<!-- Categories Filter -->
+<section class="blog-categories">
+  <div class="categories-header">
+    <h2>Explore by <span class="highlight-categories">Category</span></h2>
+    <p>Discover content tailored to your interests</p>
+  </div>
+  
+  <div class="categories-grid">
+    <div class="category-card ai-category" data-category="ai">
+      <div class="category-icon">🤖</div>
+      <h3>AI & Machine Learning</h3>
+      <p>Artificial intelligence insights and implementation strategies</p>
+      <div class="category-count">5 Articles</div>
+    </div>
+    
+    <div class="category-card cloud-category" data-category="cloud">
+      <div class="category-icon">☁️</div>
+      <h3>Cloud Infrastructure</h3>
+      <p>Cloud computing trends and best practices</p>
+      <div class="category-count">8 Articles</div>
+    </div>
+    
+    <div class="category-card web-category" data-category="web">
+      <div class="category-icon">🌐</div>
+      <h3>Web Development</h3>
+      <p>Modern web technologies and frameworks</p>
+      <div class="category-count">6 Articles</div>
+    </div>
+    
+    <div class="category-card security-category" data-category="security">
+      <div class="category-icon">🔒</div>
+      <h3>Cybersecurity</h3>
+      <p>Security best practices and threat analysis</p>
+      <div class="category-count">4 Articles</div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Subscription -->
+<section class="newsletter">
+  <h3>Stay <span class="highlight-newsletter">Updated</span></h3>
+  <p>Subscribe to our newsletter for the latest insights and industry trends</p>
+  <form class="newsletter-form">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- Blog CTA -->
+<section class="blog-cta">
+  <div class="cta-content">
+    <h2>Have a <span class="highlight-cta">Question</span>?</h2>
+    <p>Want to discuss a topic or suggest an article? We'd love to hear from you!</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="cta-button primary">Contact Us</a>
+      <a href="mailto:blog@progradetechlabs.com" class="cta-button secondary">Suggest Topic</a>
+    </div>
+  </div>
+</section>
+{{ end }}

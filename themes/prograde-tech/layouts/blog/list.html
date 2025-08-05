@@ -1,0 +1,48 @@
+{{ define "main" }}
+<section class="blog-intro">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</section>
+
+<section class="blog-posts">
+  {{ range .Pages.ByDate.Reverse }}
+  <article class="article-card" data-category="{{ .Params.category | default "general" }}">
+    <div class="article-header">
+      <div class="article-icon-small">
+        {{ $cat := .Params.category | default "general" }}
+        {{ if eq $cat "ai" }}🤖
+        {{ else if eq $cat "cloud" }}☁️
+        {{ else if eq $cat "web" }}🌐
+        {{ else }}💡{{ end }}
+      </div>
+      <div class="article-meta">
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <span class="reading-time">{{ .ReadingTime }} min read</span>
+      </div>
+    </div>
+
+    <div class="article-content">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p class="article-excerpt">{{ .Summary }}</p>
+    </div>
+
+    <div class="article-footer">
+      <div class="article-footer-left">
+        <div class="article-tags">
+          {{ with .Params.tags }}
+            {{ range . }}
+              <span class="tag">{{ . }}</span>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      <div class="article-footer-right">
+        <a href="{{ .RelPermalink }}" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="article-hover-effect"></div>
+  </article>
+  {{ end }}
+</section>
+{{ end }}

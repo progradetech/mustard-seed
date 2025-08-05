@@ -1,0 +1,387 @@
+{{ define "main" -}}
+<!-- Teams Hero Section -->
+<section class="teams-hero">
+  <div class="teams-hero-content">
+    <h1>Meet Our <span class="highlight-teams">Team</span></h1>
+    <p>Talented professionals driving innovation and delivering exceptional results</p>
+    <div class="team-stats">
+      <div class="stat-bubble" data-count="25">
+        <span class="stat-number">25+</span>
+        <span class="stat-label">Experts</span>
+      </div>
+      <div class="stat-bubble" data-count="50">
+        <span class="stat-number">50+</span>
+        <span class="stat-label">Certifications</span>
+      </div>
+      <div class="stat-bubble" data-count="10">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+    </div>
+  </div>
+  <div class="teams-hero-visual">
+    <div class="team-constellation">
+      <div class="constellation-node leadership">👑</div>
+      <div class="constellation-node development">💻</div>
+      <div class="constellation-node cloud">☁️</div>
+      <div class="constellation-node ai">🤖</div>
+      <div class="constellation-node security">🔒</div>
+      <div class="constellation-node design">🎨</div>
+      <div class="constellation-line line-1"></div>
+      <div class="constellation-line line-2"></div>
+      <div class="constellation-line line-3"></div>
+      <div class="constellation-line line-4"></div>
+      <div class="constellation-line line-5"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Leadership Team -->
+<section class="leadership-section">
+  <div class="section-header">
+    <h2>Leadership <span class="highlight-leadership">Team</span></h2>
+    <p>Visionary leaders guiding our mission and strategy</p>
+  </div>
+  
+  <div class="leadership-grid">
+    <!-- CEO -->
+    <div class="leader-card ceo" data-role="ceo">
+      <div class="leader-avatar">
+        <div class="avatar-ring"></div>
+        <div class="avatar-content">
+          {{ if .Site.Params.team.ceo.headshot }}
+            <img src="{{ .Site.Params.team.ceo.headshot }}" alt="{{ .Site.Params.team.ceo.name }}" class="leader-headshot">
+          {{ else }}
+            <span class="avatar-emoji">👨‍💼</span>
+          {{ end }}
+          <div class="avatar-glow"></div>
+        </div>
+        <div class="leader-badge">CEO</div>
+      </div>
+      <div class="leader-info">
+        <h3>{{ .Site.Params.team.ceo.name | default "Adelyn Alanis" }}</h3>
+        <p class="leader-title">{{ .Site.Params.team.ceo.title | default "Chief Executive Officer" }}</p>
+        <p class="leader-bio">{{ .Site.Params.team.ceo.bio | default "Visionary leader with 10+ years transforming businesses through technology innovation and strategic partnerships." }}</p>
+      </div>
+      <div class="leader-footer">
+        <div class="leader-skills">
+          {{ range .Site.Params.team.ceo.skills | default (slice "Strategy" "Leadership" "Innovation") }}
+            <span class="skill-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <div class="leader-social">
+          <a href="#" class="social-link">💼</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📧</a>
+        </div>
+      </div>
+      <div class="leader-background-pattern"></div>
+    </div>
+
+    <!-- VP of Sales -->
+    <div class="leader-card vp-sales" data-role="vp-sales">
+      <div class="leader-avatar">
+        <div class="avatar-ring"></div>
+        <div class="avatar-content">
+          {{ if .Site.Params.team.vp_sales.headshot }}
+            <img src="{{ .Site.Params.team.vp_sales.headshot }}" alt="{{ .Site.Params.team.vp_sales.name }}" class="leader-headshot">
+          {{ else }}
+            <span class="avatar-emoji">💼</span>
+          {{ end }}
+          <div class="avatar-glow"></div>
+        </div>
+        <div class="leader-badge">VP SALES</div>
+      </div>
+      <div class="leader-info">
+        <h3>{{ .Site.Params.team.vp_sales.name | default "John Smith" }}</h3>
+        <p class="leader-title">{{ .Site.Params.team.vp_sales.title | default "VP of Sales" }}</p>
+        <p class="leader-bio">{{ .Site.Params.team.vp_sales.bio | default "Results-driven sales executive with expertise in enterprise solutions and client relationship management." }}</p>
+      </div>
+      <div class="leader-footer">
+        <div class="leader-skills">
+          {{ range .Site.Params.team.vp_sales.skills | default (slice "Sales Strategy" "Client Relations" "Business Development") }}
+            <span class="skill-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <div class="leader-social">
+          <a href="#" class="social-link">💼</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📧</a>
+        </div>
+      </div>
+      <div class="leader-background-pattern"></div>
+    </div>
+
+    <!-- VP of Engineering -->
+    <div class="leader-card vp-engineering" data-role="vp-engineering">
+      <div class="leader-avatar">
+        <div class="avatar-ring"></div>
+        <div class="avatar-content">
+          {{ if .Site.Params.team.vp_engineering.headshot }}
+            <img src="{{ .Site.Params.team.vp_engineering.headshot }}" alt="{{ .Site.Params.team.vp_engineering.name }}" class="leader-headshot">
+          {{ else }}
+            <span class="avatar-emoji">👩‍💻</span>
+          {{ end }}
+          <div class="avatar-glow"></div>
+        </div>
+        <div class="leader-badge">VP ENG</div>
+      </div>
+      <div class="leader-info">
+        <h3>{{ .Site.Params.team.vp_engineering.name | default "Sarah Johnson" }}</h3>
+        <p class="leader-title">{{ .Site.Params.team.vp_engineering.title | default "VP of Engineering" }}</p>
+        <p class="leader-bio">{{ .Site.Params.team.vp_engineering.bio | default "Technical leader with deep expertise in software development, team management, and engineering best practices." }}</p>
+      </div>
+      <div class="leader-footer">
+        <div class="leader-skills">
+          {{ range .Site.Params.team.vp_engineering.skills | default (slice "Software Development" "Team Leadership" "Architecture") }}
+            <span class="skill-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <div class="leader-social">
+          <a href="#" class="social-link">💼</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📧</a>
+        </div>
+      </div>
+      <div class="leader-background-pattern"></div>
+    </div>
+
+    <!-- VP of Architecture -->
+    <div class="leader-card vp-architecture" data-role="vp-architecture">
+      <div class="leader-avatar">
+        <div class="avatar-ring"></div>
+        <div class="avatar-content">
+          {{ if .Site.Params.team.vp_architecture.headshot }}
+            <img src="{{ .Site.Params.team.vp_architecture.headshot }}" alt="{{ .Site.Params.team.vp_architecture.name }}" class="leader-headshot">
+          {{ else }}
+            <span class="avatar-emoji">🏗️</span>
+          {{ end }}
+          <div class="avatar-glow"></div>
+        </div>
+        <div class="leader-badge">VP ARCH</div>
+      </div>
+      <div class="leader-info">
+        <h3>{{ .Site.Params.team.vp_architecture.name | default "Michael Chen" }}</h3>
+        <p class="leader-title">{{ .Site.Params.team.vp_architecture.title | default "VP of Architecture" }}</p>
+        <p class="leader-bio">{{ .Site.Params.team.vp_architecture.bio | default "Enterprise architect specializing in cloud infrastructure, system design, and technology strategy." }}</p>
+      </div>
+      <div class="leader-footer">
+        <div class="leader-skills">
+          {{ range .Site.Params.team.vp_architecture.skills | default (slice "Enterprise Architecture" "Cloud Infrastructure" "System Design") }}
+            <span class="skill-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <div class="leader-social">
+          <a href="#" class="social-link">💼</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📧</a>
+        </div>
+      </div>
+      <div class="leader-background-pattern"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Specialists -->
+<!--
+<section class="specialists-section">
+  <div class="section-header">
+    <h2>Our <span class="highlight-specialists">Specialists</span></h2>
+    <p>Expert professionals across diverse technology domains</p>
+  </div>
+
+  <div class="specialists-grid">
+    <div class="specialist-card web-dev" data-specialty="web">
+      <div class="specialist-icon">
+        <span class="specialty-emoji">🌐</span>
+        <div class="icon-pulse"></div>
+      </div>
+      <div class="specialist-info">
+        <h3>Sarah Williams</h3>
+        <p class="specialist-role">Lead Web Developer</p>
+        <p class="specialist-description">Frontend and backend expertise with modern frameworks and performance optimization.</p>
+        <div class="specialist-tech">
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">TypeScript</span>
+        </div>
+      </div>
+      <div class="specialist-hover-content">
+        <div class="projects-count">15+ Projects</div>
+        <div class="experience-years">8 Years</div>
+        <a href="#" class="contact-specialist">Connect</a>
+      </div>
+    </div>
+
+    <div class="specialist-card cloud-arch" data-specialty="cloud">
+      <div class="specialist-icon">
+        <span class="specialty-emoji">☁️</span>
+        <div class="icon-pulse"></div>
+      </div>
+      <div class="specialist-info">
+        <h3>David Chen</h3>
+        <p class="specialist-role">Cloud Infrastructure Architect</p>
+        <p class="specialist-description">Designing scalable, secure cloud solutions with DevOps and automation expertise.</p>
+        <div class="specialist-tech">
+          <span class="tech-badge">AWS</span>
+          <span class="tech-badge">Kubernetes</span>
+          <span class="tech-badge">Terraform</span>
+        </div>
+      </div>
+      <div class="specialist-hover-content">
+        <div class="projects-count">20+ Projects</div>
+        <div class="experience-years">10 Years</div>
+        <a href="#" class="contact-specialist">Connect</a>
+      </div>
+    </div>
+
+    <div class="specialist-card ai-expert" data-specialty="ai">
+      <div class="specialist-icon">
+        <span class="specialty-emoji">🤖</span>
+        <div class="icon-pulse"></div>
+      </div>
+      <div class="specialist-info">
+        <h3>Emily Rodriguez</h3>
+        <p class="specialist-role">AI & Data Science Lead</p>
+        <p class="specialist-description">Machine learning, data analytics, and AI integration for business transformation.</p>
+        <div class="specialist-tech">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">TensorFlow</span>
+          <span class="tech-badge">MLOps</span>
+        </div>
+      </div>
+      <div class="specialist-hover-content">
+        <div class="projects-count">12+ Projects</div>
+        <div class="experience-years">6 Years</div>
+        <a href="#" class="contact-specialist">Connect</a>
+      </div>
+    </div>
+
+    <div class="specialist-card security-expert" data-specialty="security">
+      <div class="specialist-icon">
+        <span class="specialty-emoji">🔒</span>
+        <div class="icon-pulse"></div>
+      </div>
+      <div class="specialist-info">
+        <h3>Alex Thompson</h3>
+        <p class="specialist-role">Cybersecurity Specialist</p>
+        <p class="specialist-description">Security architecture, penetration testing, and compliance consulting expertise.</p>
+        <div class="specialist-tech">
+          <span class="tech-badge">Security</span>
+          <span class="tech-badge">Compliance</span>
+          <span class="tech-badge">Testing</span>
+        </div>
+      </div>
+      <div class="specialist-hover-content">
+        <div class="projects-count">18+ Projects</div>
+        <div class="experience-years">9 Years</div>
+        <a href="#" class="contact-specialist">Connect</a>
+      </div>
+    </div>
+
+    <div class="specialist-card mobile-dev" data-specialty="mobile">
+      <div class="specialist-icon">
+        <span class="specialty-emoji">📱</span>
+        <div class="icon-pulse"></div>
+      </div>
+      <div class="specialist-info">
+        <h3>Lisa Park</h3>
+        <p class="specialist-role">Mobile Development Lead</p>
+        <p class="specialist-description">Native and cross-platform mobile applications with exceptional user experiences.</p>
+        <div class="specialist-tech">
+          <span class="tech-badge">React Native</span>
+          <span class="tech-badge">Flutter</span>
+          <span class="tech-badge">Swift</span>
+        </div>
+      </div>
+      <div class="specialist-hover-content">
+        <div class="projects-count">14+ Projects</div>
+        <div class="experience-years">7 Years</div>
+        <a href="#" class="contact-specialist">Connect</a>
+      </div>
+    </div>
+
+    <div class="specialist-card ux-designer" data-specialty="design">
+      <div class="specialist-icon">
+        <span class="specialty-emoji">🎨</span>
+        <div class="icon-pulse"></div>
+      </div>
+      <div class="specialist-info">
+        <h3>Marcus Johnson</h3>
+        <p class="specialist-role">UX/UI Design Lead</p>
+        <p class="specialist-description">User-centered design, prototyping, and creating intuitive digital experiences.</p>
+        <div class="specialist-tech">
+          <span class="tech-badge">Figma</span>
+          <span class="tech-badge">Design Systems</span>
+          <span class="tech-badge">Prototyping</span>
+        </div>
+      </div>
+      <div class="specialist-hover-content">
+        <div class="projects-count">22+ Projects</div>
+        <div class="experience-years">8 Years</div>
+        <a href="#" class="contact-specialist">Connect</a>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- Team Culture -->
+<section class="culture-section">
+  <div class="culture-content">
+    <h2>Our <span class="highlight-culture">Culture</span></h2>
+    <p>Values that drive our success and innovation</p>
+    <div class="culture-values">
+      <div class="value-item" data-value="learning">
+        <div class="value-icon">📚</div>
+        <h3>Continuous Learning</h3>
+        <p>Staying ahead with the latest technologies and best practices</p>
+      </div>
+      <div class="value-item" data-value="collaboration">
+        <div class="value-icon">🤝</div>
+        <h3>Collaboration</h3>
+        <p>Working together to solve complex challenges and deliver excellence</p>
+      </div>
+      <div class="value-item" data-value="innovation">
+        <div class="value-icon">💡</div>
+        <h3>Innovation</h3>
+        <p>Thinking creatively to deliver exceptional and groundbreaking solutions</p>
+      </div>
+      <div class="value-item" data-value="integrity">
+        <div class="value-icon">⚖️</div>
+        <h3>Integrity</h3>
+        <p>Building trust through transparent and ethical business practices</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Careers CTA -->
+<section class="careers-cta">
+  <div class="cta-content">
+    <h2>Join Our <span class="highlight-careers">Team</span></h2>
+    <p>Ready to work with cutting-edge technologies and talented professionals?</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="cta-button primary">View Open Positions</a>
+      <a href="mailto:careers@progradetechlabs.com" class="cta-button secondary">Send Resume</a>
+    </div>
+  </div>
+  <div class="careers-visual">
+    <div class="growth-chart">
+      <div class="chart-bar" data-height="60">
+        <span class="bar-label">2021</span>
+      </div>
+      <div class="chart-bar" data-height="80">
+        <span class="bar-label">2022</span>
+      </div>
+      <div class="chart-bar" data-height="95">
+        <span class="bar-label">2023</span>
+      </div>
+      <div class="chart-bar" data-height="100">
+        <span class="bar-label">2024</span>
+      </div>
+    </div>
+    <p class="chart-caption">Team Growth</p>
+  </div>
+</section>
+{{- end }}

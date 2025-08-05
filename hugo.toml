@@ -1,0 +1,81 @@
+baseURL = 'https://progradetechlabs.com/'
+languageCode = 'en-us'
+title = 'Prograde Tech Labs'
+theme = 'prograde-tech'
+
+[params]
+  description = "Professional IT Consulting Services"
+  author = "Prograde Tech Labs"
+  
+  # Logo configuration
+  logo = "/images/ProgradeTechLabs.svg"
+  logo_alt = "Prograde Tech Labs Logo"
+  
+  # Team member headshots
+  [params.team]
+    [params.team.ceo]
+      name = "Adelyn Alanis"
+      title = "Chief Executive Officer"
+      headshot = "/images/team/ceo-headshot.jpg"
+      bio = "Visionary leader with 10+ years transforming businesses through technology innovation and strategic partnerships. Adelyn brings 10 years of specialized experience in environmental planning and transportation planning across Texas and California."
+      skills = ["Strategy", "Leadership", "Innovation"]
+      
+    [params.team.vp_sales]
+      name = "Andrew Alanis"
+      title = "VP of Sales"
+      headshot = "/images/team/vp-sales-headshot.jpg"
+      bio = "Results-driven sales executive with expertise in enterprise solutions and client relationship management. Proven track record of driving revenue growth and building strategic partnerships."
+      skills = ["Sales Strategy", "Client Relations", "Business Development"]
+      
+    [params.team.vp_engineering]
+      name = "Ernesto Juarez"
+      title = "VP of Engineering"
+      headshot = "/images/team/vp-engineering-headshot.jpg"
+      bio = "Technical leader with deep expertise in software development, team management, and engineering best practices. Passionate about building scalable solutions and mentoring engineering talent."
+      skills = ["Software Development", "Team Leadership", "Architecture"]
+      
+    [params.team.vp_architecture]
+      name = "Adam Nagle"
+      title = "VP of Architecture"
+      headshot = "/images/team/vp-architecture-headshot.jpg"
+      bio = "Enterprise architect specializing in cloud infrastructure, system design, and technology strategy. Expert in designing scalable, secure, and high-performance solutions."
+      skills = ["Enterprise Architecture", "Cloud Infrastructure", "System Design"]
+  
+  # Contact information
+  email = "info@progradetechlabs.com"
+  address = "539 W Commerce STE 4423, Dallas, TX 75208"
+  
+  # Social media links
+  twitter = "https://twitter.com/progradetechlabs"
+  linkedin = "https://linkedin.com/company/progradetechlabs"
+  github = "https://github.com/progradetechlabs"
+  
+  # Newsletter signup
+  newsletter = true
+  
+  # Call to action
+  cta_title = "Ready to transform your business?"
+  cta_description = "Schedule a free consultation with our experts today."
+  cta_button = "Schedule a Call"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 2
+  [[menu.main]]
+    name = "Teams"
+    url = "/teams/"
+    weight = 3
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5

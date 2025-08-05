@@ -1,0 +1,109 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>Welcome to <span class="highlight">Prograde Tech Labs</span></h1>
+  <p>Professional IT consulting services to help your business thrive in the digital age</p>
+  <a href="/contact/" class="cta-button">Schedule a Free Consultation</a>
+</section>
+
+<section class="about">
+  <h2>Why Choose Prograde Tech Labs?</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Expertise</h3>
+      <p>Years of experience across diverse industries with a team of certified professionals</p>
+    </div>
+    <div class="service-card">
+      <h3>Innovation</h3>
+      <p>Staying ahead with the latest technologies and best practices</p>
+    </div>
+    <div class="service-card">
+      <h3>Reliability</h3>
+      <p>Proven track record of successful projects and satisfied clients</p>
+    </div>
+    <div class="service-card">
+      <h3>Support</h3>
+      <p>Ongoing assistance beyond project completion to ensure success</p>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h3>Stay <span class="highlight-newsletter">Updated</span></h3>
+  <p>Subscribe to our newsletter for the latest insights and industry trends</p>
+  <form class="newsletter-form">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<section class="latest-blog">
+  <div class="blog-header">
+    <h2>Latest <span class="highlight-insights">Insights</span></h2>
+    <p>Stay informed with our latest thoughts on technology trends and best practices</p>
+    <a href="/blog/" class="view-all-btn">View All Articles</a>
+  </div>
+  
+  <div class="blog-preview-grid">
+    {{ range first 3 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+    <article class="blog-preview-card">
+      <div class="preview-header">
+        <div class="preview-icon">
+          {{ if eq .Title "AI Integration Best Practices" }}📱
+          {{ else if eq .Title "Cloud Infrastructure Trends" }}☁️
+          {{ else }}💡{{ end }}
+        </div>
+        <div class="preview-meta">
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          <span class="reading-time">5 min read</span>
+        </div>
+      </div>
+      
+      <div class="preview-content">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="preview-excerpt">{{ .Summary }}</p>
+      </div>
+      
+      <div class="preview-footer">
+        <!-- Top row: tags with clear spacing -->
+        <div class="preview-tags">
+          {{ if eq .Title "AI Integration Best Practices" }}
+          <span class="preview-tag ai">AI</span>
+          <span class="preview-tag">Integration</span>
+          {{ else if eq .Title "Cloud Infrastructure Trends" }}
+          <span class="preview-tag cloud">Cloud</span>
+          <span class="preview-tag">Infrastructure</span>
+          {{ else }}
+          <span class="preview-tag">Technology</span>
+          {{ end }}
+        </div>
+
+        <!-- Bottom row: read more and engagement split across -->
+        <div class="preview-footer-row">
+          <a href="{{ .RelPermalink }}" class="preview-read-more">
+            Read Article
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="card-glow"></div>
+    </article>
+    {{ end }}
+  </div>
+  
+  <div class="blog-cta-mini">
+    <div class="cta-mini-content">
+      <h3>Want to stay ahead of the curve?</h3>
+      <p>Subscribe to our newsletter for weekly insights and industry updates</p>
+      <a href="/blog/" class="cta-mini-btn">Explore Our Blog</a>
+    </div>
+    <div class="cta-mini-visual">
+      <div class="floating-ideas">
+        <span class="idea-bubble">💡</span>
+        <span class="idea-bubble">🚀</span>
+        <span class="idea-bubble">⚡</span>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,27 @@
+{{- $base := resources.Get "css/base.css" -}}
+{{- $home := resources.Get "css/home.css" -}}
+{{- $components := resources.Get "css/components.css" -}}
+{{- $services := resources.Get "css/services.css" -}}
+{{- $teams := resources.Get "css/teams.css" -}}
+{{- $blog := resources.Get "css/blog.css" -}}
+{{- $contact := resources.Get "css/contact.css" -}}
+
+{{- $css := slice -}}
+{{- if $base -}}
+  {{- $css = $css | append $base -}}
+{{- end -}}
+{{- if $components -}}
+  {{- $css = $css | append $components -}}
+{{- end -}}
+
+{{- if gt (len $css) 0 -}}
+  {{- $bundled := $css | resources.Concat "css/bundle.css" -}}
+  <link rel="stylesheet" href="{{ $bundled.RelPermalink }}">
+{{- end -}}
+
+{{- /* Page-specific styles loaded after bundle for proper override order */ -}}
+{{- with $home -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}
+{{- with $services -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}
+{{- with $teams -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}
+{{- with $contact -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}
+{{- with $blog -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}

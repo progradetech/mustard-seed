@@ -1,0 +1,7 @@
+{{- $servicesCSS := resources.Get "css/services.css" -}}
+{{- if $servicesCSS -}}
+  <!-- FOUND: services.css -->
+  <style>/* TEST: {{ $servicesCSS.Content | truncate 100 }} */</style>
+{{- else -}}
+  <!-- NOT FOUND: services.css -->
+{{- end -}}

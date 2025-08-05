@@ -1,0 +1,151 @@
+{{ define "main" -}}
+<!-- Sticky reading progress bar -->
+<div id="reading-progress" class="reading-progress">
+  <div class="reading-progress__bar" id="reading-progress-bar"></div>
+</div>
+
+<article class="blog-post blog-post--single">
+  <!-- Immersive hero -->
+  <header class="post-hero">
+    <div class="post-hero__bg"></div>
+    <div class="post-hero__content">
+      <div class="post-hero__eyebrow">
+        <a href="/blog" class="eyebrow-link">← Back to Blog</a>
+        {{ with .Params.category }}
+        <span class="category-chip">{{ . }}</span>
+        {{ end }}
+      </div>
+
+      <h1 class="post-hero__title">{{ .Title }}</h1>
+
+      {{ with .Params.description -}}
+      <p class="post-hero__subtitle">{{ . }}</p>
+      {{- else -}}
+        {{ with .Summary -}}
+        <p class="post-hero__subtitle">{{ . | plainify }}</p>
+        {{- end }}
+      {{- end }}
+
+      <div class="post-hero__meta">
+        <div class="author-meta">
+          {{ with .Params.author }}
+          <div class="author-avatar" aria-hidden="true">👤</div>
+          <span class="author-name">{{ . }}</span>
+          {{ end }}
+          <span class="dot">•</span>
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          {{ with .Lastmod }}
+          <span class="dot">•</span>
+          <span class="last-updated">Updated {{ .Format "Jan 2, 2006" }}</span>
+          {{ end }}
+        </div>
+        <div class="read-chip">
+          {{ $wpm := 200 -}}
+          {{ $words := .WordCount -}}
+          {{ $mins := div (add $words (sub $wpm 1)) $wpm -}}
+          <span class="read-time">{{ if lt $mins 1 }}1 min read{{ else }}{{ $mins }} min read{{ end }}</span>
+        </div>
+      </div>
+
+      {{ with .Params.tags }}
+      <div class="post-hero__tags">
+        {{ range . }}
+          <a class="tag-chip" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </header>
+
+  <!-- Layout: content with TOC at the top (full width) -->
+  <div>
+    {{ with .TableOfContents -}}
+    <section class="toc-top" id="post-toc">
+      <div class="toc-top__card">
+        <div class="toc-top__header">
+          <span class="toc-icon">🧭</span>
+          <span class="toc-title">On this page</span>
+          <button class="toc-toggle" data-toggle="#post-toc">▾</button>
+        </div>
+        <nav class="toc-top__body">
+          {{ . }}
+        </nav>
+      </div>
+          {{ end }}
+
+      <div class="post-content content-prose" id="post-content">
+        {{ .Content }}
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Share row -->
+  <div class="post-share">
+    <span class="share-label">Share</span>
+    <div class="share-actions">
+      <a class="share-btn" href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title | urlquery }}" rel="noopener" target="_blank">𝕏</a>
+      <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" rel="noopener" target="_blank">in</a>
+      <button class="share-btn copy-link" data-link="{{ .Permalink }}">⧉</button>
+    </div>
+  </div>
+
+  <!-- Prev / Next -->
+  <nav class="post-nav-cards">
+    {{ with .PrevInSection -}}
+    <a href="{{ .RelPermalink }}" class="post-card prev">
+      <span class="label">Previous</span>
+      <span class="title">{{ .Title }}</span>
+      <span class="arrow">←</span>
+    </a>
+    {{- end }}
+    {{ with .NextInSection -}}
+    <a href="{{ .RelPermalink }}" class="post-card next">
+      <span class="label">Next</span>
+      <span class="title">{{ .Title }}</span>
+      <span class="arrow">→</span>
+    </a>
+    {{- end }}
+  </nav>
+</article>
+
+<!-- Inline JS: progress + copy link + toc toggle (small, no external deps) -->
+<script>
+(function () {
+  const content = document.getElementById('post-content');
+  const bar = document.getElementById('reading-progress-bar');
+  const onScroll = () => {
+    if (!content || !bar) return;
+    const rect = content.getBoundingClientRect();
+    const contentTop = window.scrollY + rect.top - 80;
+    const contentBottom = window.scrollY + rect.bottom - window.innerHeight;
+    const total = Math.max(contentBottom - contentTop, 1);
+    const progressed = Math.min(Math.max(window.scrollY - contentTop, 0), total);
+    const pct = Math.round((progressed / total) * 100);
+    bar.style.transform = 'scaleX(' + (pct / 100) + ')';
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  // Copy link
+  document.querySelectorAll('.copy-link').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.link);
+        btn.textContent = '✓';
+        setTimeout(() => (btn.textContent = '⧉'), 1200);
+      } catch (_) {}
+    });
+  });
+
+  // TOC collapse
+  document.querySelectorAll('.toc-toggle').forEach(t => {
+    t.addEventListener('click', () => {
+      const wrap = document.querySelector(t.dataset.toggle);
+      wrap?.classList.toggle('collapsed');
+    });
+  });
+})();
+</script>
+{{ end }}
