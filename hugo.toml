@@ -1,7 +1,13 @@
-baseURL = 'https://progradetechlabs.com/'
+# Project Pages base URL. Replace USERNAME and REPO_NAME as needed.
+# Example: https://USERNAME.github.io/REPO_NAME/
+baseURL = 'https://progradetech.github.io/mustard-seed/'
 languageCode = 'en-us'
 title = 'Prograde Tech Labs'
 theme = 'prograde-tech'
+
+# Recommended for GitHub Project Pages so links work under /REPO_NAME/
+relativeURLs = true
+canonifyURLs = false
 
 [params]
   description = "Professional IT Consulting Services"
