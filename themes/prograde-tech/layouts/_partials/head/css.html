@@ -14,14 +14,16 @@
   {{- $css = $css | append $components -}}
 {{- end -}}
 
+{{- $abs := func (r) (cond site.IsServer r.RelPermalink (absURL r.RelPermalink)) -}}
+
 {{- if gt (len $css) 0 -}}
   {{- $bundled := $css | resources.Concat "css/bundle.css" -}}
-  <link rel="stylesheet" href="{{ $bundled.RelPermalink }}">
+  <link rel="stylesheet" href="{{ $bundled.RelPermalink | absURL }}">
 {{- end -}}
 
 {{- /* Page-specific styles loaded after bundle for proper override order */ -}}
-{{- with $home -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}
-{{- with $services -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}
-{{- with $teams -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}
-{{- with $contact -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}
-{{- with $blog -}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{- end -}}
+{{- with $home -}}<link rel="stylesheet" href="{{ .RelPermalink | absURL }}">{{- end -}}
+{{- with $services -}}<link rel="stylesheet" href="{{ .RelPermalink | absURL }}">{{- end -}}
+{{- with $teams -}}<link rel="stylesheet" href="{{ .RelPermalink | absURL }}">{{- end -}}
+{{- with $contact -}}<link rel="stylesheet" href="{{ .RelPermalink | absURL }}">{{- end -}}
+{{- with $blog -}}<link rel="stylesheet" href="{{ .RelPermalink | absURL }}">{{- end -}}

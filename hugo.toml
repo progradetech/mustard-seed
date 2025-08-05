@@ -6,8 +6,9 @@ title = 'Prograde Tech Labs'
 theme = 'prograde-tech'
 
 # Recommended for GitHub Project Pages so links work under /REPO_NAME/
+# Use relative URLs in content, and canonify to force absolute URLs with baseURL prefix.
 relativeURLs = true
-canonifyURLs = false
+canonifyURLs = true
 
 [params]
   description = "Professional IT Consulting Services"
