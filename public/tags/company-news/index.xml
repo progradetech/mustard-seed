@@ -1,10 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Company News on Prograde Tech Labs</title><link>https://progradetech.github.io/mustard-seed/tags/company-news/</link><description>Recent content in Company News on Prograde Tech Labs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jan 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://progradetech.github.io/mustard-seed/tags/company-news/index.xml" rel="self" type="application/rss+xml"/><item><title>Welcome to Our New Blog</title><link>https://progradetech.github.io/mustard-seed/blog/first-post/</link><pubDate>Wed, 15 Jan 2025 10:00:00 +0000</pubDate><guid>https://progradetech.github.io/mustard-seed/blog/first-post/</guid><description>&lt;p>We&amp;rsquo;re excited to launch our new blog where we&amp;rsquo;ll be sharing insights, updates, and thoughts from our team at Prograde Tech Labs.&lt;/p>
-&lt;p>In this space, you&amp;rsquo;ll find articles about:&lt;/p>
-&lt;ul>
-&lt;li>Latest trends in technology&lt;/li>
-&lt;li>Best practices in software development&lt;/li>
-&lt;li>Insights from our projects&lt;/li>
-&lt;li>Industry analysis and predictions&lt;/li>
-&lt;/ul>
-&lt;p>Stay tuned for our upcoming posts where we&amp;rsquo;ll dive deep into topics like cloud infrastructure, AI integration, and web development best practices.&lt;/p>
-&lt;p>Thank you for joining us on this journey!&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Company News on Prograde Tech Labs</title>
+    <link>http://localhost:1313/mustard-seed/tags/company-news/</link>
+    <description>Recent content in Company News on Prograde Tech Labs</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jan 2025 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/mustard-seed/tags/company-news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Our New Blog</title>
+      <link>http://localhost:1313/mustard-seed/blog/first-post/</link>
+      <pubDate>Wed, 15 Jan 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mustard-seed/blog/first-post/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re excited to launch our new blog where we&amp;rsquo;ll be sharing insights, updates, and thoughts from our team at Prograde Tech Labs.&lt;/p&gt;&#xA;&lt;p&gt;In this space, you&amp;rsquo;ll find articles about:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Latest trends in technology&lt;/li&gt;&#xA;&lt;li&gt;Best practices in software development&lt;/li&gt;&#xA;&lt;li&gt;Insights from our projects&lt;/li&gt;&#xA;&lt;li&gt;Industry analysis and predictions&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Stay tuned for our upcoming posts where we&amp;rsquo;ll dive deep into topics like cloud infrastructure, AI integration, and web development best practices.&lt;/p&gt;&#xA;&lt;p&gt;Thank you for joining us on this journey!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

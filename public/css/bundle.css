@@ -666,6 +666,29 @@ section li::marker {
   transform: translateY(-1px);
 }
 
+/* Secondary CTA Button */
+.cta-button.secondary {
+  background: transparent;
+  color: var(--accent-blue);
+  border: 2px solid var(--accent-blue);
+  box-shadow: none;
+}
+
+.cta-button.secondary:hover {
+  background: var(--accent-blue);
+  color: var(--white);
+  border-color: var(--accent-blue);
+}
+
+/* CTA Buttons Container */
+.cta-buttons {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 /* Team leader headshot styling */
 .leader-headshot {
   width: 100px;

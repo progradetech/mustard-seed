@@ -50,7 +50,7 @@
         <div class="avatar-ring"></div>
         <div class="avatar-content">
           {{ if .Site.Params.team.ceo.headshot }}
-            <img src="{{ .Site.Params.team.ceo.headshot }}" alt="{{ .Site.Params.team.ceo.name }}" class="leader-headshot">
+            <img src="{{ .Site.Params.team.ceo.headshot | absURL }}" alt="{{ .Site.Params.team.ceo.name }}" class="leader-headshot">
           {{ else }}
             <span class="avatar-emoji">👨‍💼</span>
           {{ end }}
@@ -84,7 +84,7 @@
         <div class="avatar-ring"></div>
         <div class="avatar-content">
           {{ if .Site.Params.team.vp_sales.headshot }}
-            <img src="{{ .Site.Params.team.vp_sales.headshot }}" alt="{{ .Site.Params.team.vp_sales.name }}" class="leader-headshot">
+            <img src="{{ .Site.Params.team.vp_sales.headshot | absURL }}" alt="{{ .Site.Params.team.vp_sales.name }}" class="leader-headshot">
           {{ else }}
             <span class="avatar-emoji">💼</span>
           {{ end }}
@@ -118,7 +118,7 @@
         <div class="avatar-ring"></div>
         <div class="avatar-content">
           {{ if .Site.Params.team.vp_engineering.headshot }}
-            <img src="{{ .Site.Params.team.vp_engineering.headshot }}" alt="{{ .Site.Params.team.vp_engineering.name }}" class="leader-headshot">
+            <img src="{{ .Site.Params.team.vp_engineering.headshot | absURL }}" alt="{{ .Site.Params.team.vp_engineering.name }}" class="leader-headshot">
           {{ else }}
             <span class="avatar-emoji">👩‍💻</span>
           {{ end }}
@@ -152,7 +152,7 @@
         <div class="avatar-ring"></div>
         <div class="avatar-content">
           {{ if .Site.Params.team.vp_architecture.headshot }}
-            <img src="{{ .Site.Params.team.vp_architecture.headshot }}" alt="{{ .Site.Params.team.vp_architecture.name }}" class="leader-headshot">
+            <img src="{{ .Site.Params.team.vp_architecture.headshot | absURL }}" alt="{{ .Site.Params.team.vp_architecture.name }}" class="leader-headshot">
           {{ else }}
             <span class="avatar-emoji">🏗️</span>
           {{ end }}
@@ -362,11 +362,11 @@
     <h2>Join Our <span class="highlight-careers">Team</span></h2>
     <p>Ready to work with cutting-edge technologies and talented professionals?</p>
     <div class="cta-buttons">
-      <a href="{{ "/contact/" | absURL }}" class="cta-button primary">View Open Positions</a>
+      <!-- <a href="{{ "contact" | relURL }}" class="cta-button primary">View Open Positions</a> -->
       <a href="mailto:careers@progradetechlabs.com" class="cta-button secondary">Send Resume</a>
     </div>
   </div>
-  <div class="careers-visual">
+  <!-- <div class="careers-visual">
     <div class="growth-chart">
       <div class="chart-bar" data-height="60">
         <span class="bar-label">2021</span>
@@ -382,6 +382,6 @@
       </div>
     </div>
     <p class="chart-caption">Team Growth</p>
-  </div>
+  </div> -->
 </section>
 {{- end }}
