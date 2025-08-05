@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://progradetech.github.io/mustard-seed/'
 languageCode = 'en-US'
 title = 'My New Hugo Site'
 
