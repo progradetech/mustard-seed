@@ -22,7 +22,7 @@
     </div>
 
     <div class="article-content">
-      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <h3><a href="{{ .RelPermalink | absURL }}">{{ .Title }}</a></h3>
       <p class="article-excerpt">{{ .Summary }}</p>
     </div>
 
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="article-footer-right">
-        <a href="{{ .RelPermalink }}" class="read-more-btn">Read More</a>
+        <a href="{{ .RelPermalink | absURL }}" class="read-more-btn">Read More</a>
       </div>
     </div>
 
