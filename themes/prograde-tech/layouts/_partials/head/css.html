@@ -14,8 +14,6 @@
   {{- $css = $css | append $components -}}
 {{- end -}}
 
-{{- $abs := func (r) (cond site.IsServer r.RelPermalink (absURL r.RelPermalink)) -}}
-
 {{- if gt (len $css) 0 -}}
   {{- $bundled := $css | resources.Concat "css/bundle.css" -}}
   <link rel="stylesheet" href="{{ $bundled.RelPermalink | absURL }}">

@@ -1,19 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Infrastructure on Prograde Tech Labs</title>
-    <link>http://localhost:1313/tags/infrastructure/</link>
-    <description>Recent content in Infrastructure on Prograde Tech Labs</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2025 09:30:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/infrastructure/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Top Cloud Infrastructure Trends for 2025</title>
-      <link>http://localhost:1313/blog/cloud-infrastructure-trends/</link>
-      <pubDate>Sat, 01 Feb 2025 09:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/cloud-infrastructure-trends/</guid>
-      <description>&lt;p&gt;As we move further into 2025, the landscape of cloud infrastructure continues to evolve rapidly. Organizations are constantly seeking ways to optimize their cloud investments while maintaining security and performance. Here are the top trends we&amp;rsquo;re seeing in cloud infrastructure this year:&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-multi-cloud-and-hybrid-strategies&#34;&gt;1. Multi-Cloud and Hybrid Strategies&lt;/h2&gt;&#xA;&lt;p&gt;Organizations are increasingly adopting multi-cloud and hybrid approaches to avoid vendor lock-in and optimize costs. This strategy allows businesses to leverage the best services from different providers while maintaining flexibility.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Infrastructure on Prograde Tech Labs</title><link>https://progradetech.github.io/mustard-seed/tags/infrastructure/</link><description>Recent content in Infrastructure on Prograde Tech Labs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2025 09:30:00 +0000</lastBuildDate><atom:link href="https://progradetech.github.io/mustard-seed/tags/infrastructure/index.xml" rel="self" type="application/rss+xml"/><item><title>Top Cloud Infrastructure Trends for 2025</title><link>https://progradetech.github.io/mustard-seed/blog/cloud-infrastructure-trends/</link><pubDate>Sat, 01 Feb 2025 09:30:00 +0000</pubDate><guid>https://progradetech.github.io/mustard-seed/blog/cloud-infrastructure-trends/</guid><description>&lt;p>As we move further into 2025, the landscape of cloud infrastructure continues to evolve rapidly. Organizations are constantly seeking ways to optimize their cloud investments while maintaining security and performance. Here are the top trends we&amp;rsquo;re seeing in cloud infrastructure this year:&lt;/p>
+&lt;h2 id="1-multi-cloud-and-hybrid-strategies">1. Multi-Cloud and Hybrid Strategies&lt;/h2>
+&lt;p>Organizations are increasingly adopting multi-cloud and hybrid approaches to avoid vendor lock-in and optimize costs. This strategy allows businesses to leverage the best services from different providers while maintaining flexibility.&lt;/p></description></item></channel></rss>
