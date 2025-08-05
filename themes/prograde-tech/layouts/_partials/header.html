@@ -1,8 +1,8 @@
 <header>
   <div class="site-header">
-    <a href="/" class="logo">
+    <a href="{{ "/" | absURL }}" class="logo">
       {{ if .Site.Params.logo }}
-        <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Params.logo_alt | default .Site.Title }}" class="logo-img">
+        <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Params.logo_alt | default .Site.Title }}" class="logo-img">
       {{ else }}
         <div class="logo-placeholder">{{ .Site.Title }}</div>
       {{ end }}
