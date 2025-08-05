@@ -10,6 +10,15 @@ theme = 'prograde-tech'
 relativeURLs = true
 canonifyURLs = true
 
+# Quiet Hugo warning about raw HTML in Markdown, or explicitly allow it.
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Enable unsafe HTML rendering so inline HTML in Markdown is allowed.
+      unsafe = true
+
 [params]
   description = "Professional IT Consulting Services"
   author = "Prograde Tech Labs"
